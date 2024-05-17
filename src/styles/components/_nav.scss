@@ -1,0 +1,20 @@
+.nav-header {
+    padding-left: 20px;
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+
+    &__nav-link-home,
+    &__nav-link-about {
+        text-decoration: none;
+        color: inherit;
+        width: 136px;
+        font-size: 24px;
+font-weight: 500;
+
+    }
+    &__nav-link-active{
+        text-decoration-line: underline;
+        line-height: 142.6%;
+    }
+}

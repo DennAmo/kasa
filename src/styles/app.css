@@ -1,0 +1,18 @@
+.nav-header__nav-link-home, .nav-header__nav-link-about {
+  text-decoration: none;
+  color: inherit;
+  width: 136px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.nav-header__nav-link-active {
+  text-decoration-line: underline;
+  line-height: 142.6%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=app.css.map */

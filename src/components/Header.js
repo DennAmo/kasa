@@ -1,12 +1,12 @@
 import React from "react";
 import Nav from "./Nav";
 
-function Header()  {
+function Header() {
     return (
         <header>
-<Nav className="nav-header" />
+            <Nav />
         </header>
     )
-    }
-    
-    export default Header
+}
+
+export default Header
