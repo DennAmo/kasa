@@ -1,0 +1,45 @@
+.collapse {
+    color: white;
+    margin-top: 48px;
+    
+
+    &__layout{
+padding-left: 15px;
+position: relative;
+    background-color: $primary-color;
+    border-radius: 5px;
+   
+    display: flex;
+    flex-direction: column;
+
+margin-bottom: 38px;
+
+
+
+}
+
+&__title {
+    
+    font-size: 24px;
+
+    
+}
+.collapse h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.collapse p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+}
