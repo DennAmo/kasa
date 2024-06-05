@@ -1,38 +1,36 @@
-
-
 @media (max-width: $breakpoint-tablette) {
 
     main {
-    padding: 0;
-}
-
-main,
-.header {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.header {
-
-    flex-wrap: wrap;
-}
-
-.banner {
-
-    &__title {
-        padding-left: 15px;
-        padding-top: 0px;
-        display: flex;
-        flex-wrap: wrap;
-        top: 50px;
-        
+        padding: 0;
     }
-}
+
+    main,
+    .header {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .header {
+
+        flex-wrap: wrap;
+    }
+
+    .banner {
+
+        &__title {
+            padding-left: 15px;
+            padding-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            top: 50px;
+
+        }
+    }
 
     .gallery {
 
         &__layout {
-        background-color: white;
+            background-color: white;
         }
 
         &__cards {
@@ -42,9 +40,9 @@ main,
 }
 
 @media (max-width: $breakpoint-mobile) {
-.header {
-justify-content: center;
-}
+    .header {
+        justify-content: center;
+    }
 
     .banner {
 
@@ -68,5 +66,5 @@ justify-content: center;
             top: 45px;
         }
     }
-    
+
 }

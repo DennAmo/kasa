@@ -11,18 +11,15 @@ const About = () => {
       <Header />
       <main>
         <Banner />
-
-        <div className="about">
           <div className="collapse">
             {CollapseData.map((item) => {
               return (
-                <div className="collapse__layout"key={item.id}>
+                <div className="collapse__layout" key={item.id}>
                   <Collapse content={item.content} title={item.title} />
                 </div>
               );
             })}
           </div>
-        </div>
       </main>
       <Footer />
     </div>

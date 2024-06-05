@@ -63,9 +63,8 @@
   font-size: 24px;
   font-weight: 500;
 }
-.nav-header__nav-link-active {
+.nav-header__nav-link-home:hover, .nav-header__nav-link-about:hover {
   text-decoration-line: underline;
-  line-height: 142.6%;
 }
 
 * {
@@ -245,4 +244,35 @@ a {
 article {
   width: 33%;
   padding: 20px;
+}
+
+.carrousel {
+  position: relative;
+}
+.carrousel__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 410px;
+  border-radius: 25px;
+}
+.carrousel__slider {
+  opacity: 0;
+}
+.carrousel__arrow {
+  position: absolute;
+  border-radius: 25px;
+  top: 50%;
+  z-index: 1;
+  color: white;
+}
+.carrousel__leftarrow {
+  left: 20px;
+}
+.carrousel__rightarrow {
+  right: 20px;
+}
+.carrousel__active {
+  opacity: 1;
+  transition: opacity ease-in-out 0.2s;
 }/*# sourceMappingURL=app.css.map */

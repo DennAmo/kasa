@@ -6,19 +6,19 @@
         align-items: center;
 
 
-        &__number{
+        &__number {
             font-size: 155px;
             font-weight: 700;
             color: $primary-color;
             height: 150px;
 
 
-                }
+        }
 
         &__text {
             color: $primary-color;
             padding-bottom: 85px;
-            
+
         }
 
         &__link {
@@ -30,28 +30,28 @@
     }
 }
 
-@media  (max-width: $breakpoint-tablette) {
+@media (max-width: $breakpoint-tablette) {
     .error {
 
         &__container {
             display: flex;
             flex-direction: column;
             align-items: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
+            padding-top: 70px;
+            padding-bottom: 70px;
 
-            &__number{
+            &__number {
                 font-size: 96px;
-                    }
-                }
-  }
+            }
+        }
+    }
 
- 
-  .header {
-    padding-left: 0px;
-    padding-right: 0px;
-    justify-content: center;
-  }
+
+    .header {
+        padding-left: 0px;
+        padding-right: 0px;
+        justify-content: center;
+    }
 
 
 

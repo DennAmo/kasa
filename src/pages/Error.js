@@ -10,19 +10,19 @@ const Home = () => {
         <div className="error">
             <Header />
             <main>
-            <section className="error__container">
-                <p className="error__container__number">404
-                </p>
-                <p className="error__container__text">
-                    Oups! La page que vous demandez n'existe pas.
-                </p>
+                <section className="error__container">
+                    <p className="error__container__number">404
+                    </p>
+                    <p className="error__container__text">
+                        Oups! La page que vous demandez n'existe pas.
+                    </p>
 
-                <NavLink to="/" className="error__container__link">
-                    Retourner sur la page d'accueil
-                </NavLink>
+                    <NavLink to="/" className="error__container__link">
+                        Retourner sur la page d'accueil
+                    </NavLink>
 
-            </section>
-</main>
+                </section>
+            </main>
             <Footer />
         </div>
 
