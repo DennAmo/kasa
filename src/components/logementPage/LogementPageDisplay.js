@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import LogementData from "../../datas/logement.json"
 import Carrousel from "./Carrousel";
-import Tag from "./Tag";
+import Tag from "./Tag"
 import Collapse from "../Collapse"
 import Rate from "./Rate";
 import Host from "./Host";
@@ -17,12 +17,6 @@ const LogementPageDisplay = () => {
     setPageLogement(foundLogement);
   }, [id]);
 
-  const renderTags = PageLogement && PageLogement.tags ?
-    PageLogement.tags.map((tag, i) => {
-      return <Tag key={i} nom={tag} />;
-    }) : null;
-
-
   const renderEquipements = () => {
     return PageLogement.equipments.map((equipment, index) => (
       <ul key={index}>
@@ -30,7 +24,6 @@ const LogementPageDisplay = () => {
       </ul>
     ));
   };
-
 
   if (PageLogement === null) {
     return <div>Loading...</div>;
@@ -40,31 +33,32 @@ const LogementPageDisplay = () => {
     return <Navigate replace to="/404" />;
   }
 
-
-
   return (
     <section className="logement">
-      <Carrousel slides={PageLogement?.pictures} />
+      <Carrousel slides={PageLogement.pictures} />
       <div className="logement__container">
-      <div className="logement__description">
-              <span className="logement__description__title">{PageLogement.title}</span>
-              <span className="logement__description__location">{PageLogement.location}</span>
-            </div>
-      <div className="logement__tag">{renderTags}
-      </div>
-      <div className="logement__host">
-              <Host name={PageLogement.host.name} picture={PageLogement.host.picture} />
-            </div>
-      <div className="logement__rate">
-      <Rate score={PageLogement.rating} />
-      </div>
-      </div>
-        <div className="collapse__layout">
-          <Collapse content={PageLogement.description} title="Description" />
+        <div className="logement__description">
+          <span className="logement__description__title">{PageLogement.title}</span>
+          <span className="logement__description__location">{PageLogement.location}</span>
         </div>
-        <div className="collapse__layout">
-          <Collapse content={renderEquipements()} title="Équipements" />
+        <div className="logement__tag">
+        {PageLogement.tags.map((tag, i) => (
+            <Tag key={i} nom={tag} />
+          ))}
         </div>
+        <div className="logement__host">
+          <Host name={PageLogement.host.name} picture={PageLogement.host.picture} />
+        </div>
+        <div className="logement__rate">
+          <Rate score={PageLogement.rating} />
+        </div>
+      </div>
+      <div className="collapse__layout">
+        <Collapse content={PageLogement.description} title="Description" />
+      </div>
+      <div className="collapse__layout">
+      <Collapse content={renderEquipements()} title="Équipements" />
+      </div>
     </section>
   )
 }
