@@ -12,15 +12,15 @@ const Collapse = ({ title, content }) => {
   return (
 
     <>
-      <div className="collapse__title">
+      <div className="collapse__title" onClick={display}>
         <h2>{title}</h2>
-        <p onClick={display}>
+        <span>
           {isOpen ? (
             <i className="fa-solid fa-chevron-up"></i>
           ) : (
             <i className="fa-solid fa-chevron-down"></i>
           )}
-        </p>
+        </span>
       </div>
 
       <div className="collapse__content">

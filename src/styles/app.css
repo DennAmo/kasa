@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: #000000;
 }
 .footer__img {
   margin-top: 66px;
@@ -182,15 +182,20 @@ a {
   }
 }
 .collapse {
-  color: white;
   margin-top: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.collapse__layout {
+.collapse__content {
+  background-color: rgb(246, 246, 246);
+  width: 100%;
+  color: #ff6060;
+  border-radius: 0px 0px 5px 0px;
   padding-left: 15px;
+}
+.collapse__layout {
   position: relative;
   background-color: #ff6060;
   border-radius: 5px;
@@ -201,13 +206,16 @@ a {
   margin-bottom: 25px;
 }
 .collapse__title {
+  color: white;
+  cursor: pointer;
   font-size: 14px;
+  padding-left: 15px;
 }
 .collapse .collapse h2 {
   padding: 0;
   margin: 0;
 }
-.collapse .collapse p {
+.collapse .collapse span {
   margin-top: 0;
   padding-top: 0;
 }
