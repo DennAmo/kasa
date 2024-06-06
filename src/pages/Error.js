@@ -1,6 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 import { NavLink } from "react-router-dom";
 
 
@@ -8,7 +7,6 @@ const Home = () => {
     return (
 
         <div className="error">
-            <Header />
             <main>
                 <section className="error__container">
                     <p className="error__container__number">404
@@ -23,7 +21,6 @@ const Home = () => {
 
                 </section>
             </main>
-            <Footer />
         </div>
 
 

@@ -4,55 +4,69 @@ import LogementData from "../../datas/logement.json"
 import Carrousel from "./Carrousel";
 import Tag from "./Tag";
 import Collapse from "../Collapse"
+import Rate from "./Rate";
+import Host from "./Host";
+
 
 const LogementPageDisplay = () => {
-    const { id } = useParams();
-    const [PageLogement, setPageLogement] = useState(null);
+  const { id } = useParams();
+  const [PageLogement, setPageLogement] = useState(null);
 
-    useEffect(() => {
-        const foundLogement = LogementData.find((logement) => logement.id === id);
-        setPageLogement(foundLogement);
-      }, [id]);
+  useEffect(() => {
+    const foundLogement = LogementData.find((logement) => logement.id === id);
+    setPageLogement(foundLogement);
+  }, [id]);
 
-      const renderTags = PageLogement && PageLogement.tags ?
-      PageLogement.tags.map((tag, i) => {
-          return <Tag key={i} nom={tag} />;
-      }) : null;
-
-
-      const renderEquipements = () => {
-        return PageLogement.equipments.map((equipment, index) => (
-          <ul key={index}>
-            <li>{equipment}</li>
-          </ul>
-        ));
-      };
+  const renderTags = PageLogement && PageLogement.tags ?
+    PageLogement.tags.map((tag, i) => {
+      return <Tag key={i} nom={tag} />;
+    }) : null;
 
 
-      if (PageLogement === null) {
-        return <div>Loading...</div>;
-      }
+  const renderEquipements = () => {
+    return PageLogement.equipments.map((equipment, index) => (
+      <ul key={index}>
+        <li>{equipment}</li>
+      </ul>
+    ));
+  };
 
-      if (!PageLogement) {
-        return <Navigate replace to="/404" />;
-      }
 
-   
+  if (PageLogement === null) {
+    return <div>Loading...</div>;
+  }
 
-    return (
-        <section className="logement">
-            <Carrousel slides={PageLogement?.pictures} />
-            <div className="logement__container">
-                <div className="collapse__layout">
-                <Collapse content={PageLogement.description} title="Description" />
-                </div>
-                <div className="collapse__layout">
-                <Collapse content={renderEquipements()} title="Équipements" />
-</div>
-                    {renderTags}
+  if (!PageLogement) {
+    return <Navigate replace to="/404" />;
+  }
+
+
+
+  return (
+    <section className="logement">
+      <Carrousel slides={PageLogement?.pictures} />
+      <div className="logement__container">
+      <div className="logement__description">
+              <span className="logement__description__title">{PageLogement.title}</span>
+              <span className="logement__description__location">{PageLogement.location}</span>
             </div>
-        </section>
-    )
+      <div className="logement__tag">{renderTags}
+      </div>
+      <div className="logement__host">
+              <Host name={PageLogement.host.name} picture={PageLogement.host.picture} />
+            </div>
+      <div className="logement__rate">
+      <Rate score={PageLogement.rating} />
+      </div>
+      </div>
+        <div className="collapse__layout">
+          <Collapse content={PageLogement.description} title="Description" />
+        </div>
+        <div className="collapse__layout">
+          <Collapse content={renderEquipements()} title="Équipements" />
+        </div>
+    </section>
+  )
 }
 
 export default LogementPageDisplay
