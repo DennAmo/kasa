@@ -1,66 +1,69 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import LogementData from "../../datas/logement.json"
+import LogementData from "../../datas/logement.json";
 import Carrousel from "./Carrousel";
-import Tag from "./Tag"
-import Collapse from "../Collapse"
+import Tag from "./Tag";
+import Collapse from "../Collapse";
 import Rate from "./Rate";
 import Host from "./Host";
-
+import Loading from "./Loading";
 
 const LogementPageDisplay = () => {
   const { id } = useParams();
-  const [PageLogement, setPageLogement] = useState(null);
+  const [pageLogement, setPageLogement] = useState(null);
 
   useEffect(() => {
     const foundLogement = LogementData.find((logement) => logement.id === id);
-    setPageLogement(foundLogement);
+    setPageLogement(foundLogement || false);
   }, [id]);
 
-  const renderEquipements = () => {
-    return PageLogement.equipments.map((equipment, index) => (
-      <ul key={index}>
-        <li>{equipment}</li>
-      </ul>
-    ));
-  };
-
-  if (PageLogement === null) {
-    return <div>Loading...</div>;
+  if (pageLogement === null) {
+    return <Loading />;
   }
 
-  if (!PageLogement) {
+  if (!pageLogement) {
     return <Navigate replace to="/404" />;
   }
 
+  const { pictures, title, location, tags, host, rating, description, equipments } = pageLogement;
+
   return (
     <section className="logement">
-      <Carrousel slides={PageLogement.pictures} />
+      <Carrousel slides={pictures} />
       <div className="logement__container">
         <div className="logement__description">
-          <span className="logement__description__title">{PageLogement.title}</span>
-          <span className="logement__description__location">{PageLogement.location}</span>
+          <h1 className="logement__description__title">{title}</h1>
+          <p className="logement__description__location">{location}</p>
         </div>
         <div className="logement__tag">
-        {PageLogement.tags.map((tag, i) => (
-            <Tag key={i} nom={tag} />
+          {tags.map((tag, index) => (
+            <Tag key={index} nom={tag} />
           ))}
         </div>
         <div className="logement__host">
-          <Host name={PageLogement.host.name} picture={PageLogement.host.picture} />
+          <Host name={host.name} picture={host.picture} />
         </div>
         <div className="logement__rate">
-          <Rate score={PageLogement.rating} />
+          <Rate score={rating} />
         </div>
       </div>
       <div className="collapse__layout">
-        <Collapse content={PageLogement.description} title="Description" />
+        <Collapse content=
+        {description} title="Description" />
       </div>
       <div className="collapse__layout">
-      <Collapse content={renderEquipements()} title="Équipements" />
+        <Collapse content={
+            <ul>
+              {equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
+          title="Équipements"
+        />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default LogementPageDisplay
+export default LogementPageDisplay;
