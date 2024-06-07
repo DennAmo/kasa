@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
-import Home from './pages/Home.js';
+import Home from "./pages/Home.js";
 import About from "./pages/About.js";
 import Error from "./pages/Error.js";
 import LogementPage from "./pages/LogementPage.js";
 import "./styles/app.scss"
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from "./components/header-footer/Header.js";
+import Footer from "./components/header-footer/Footer.js";
 
 const App = () => {
   return (

@@ -184,13 +184,10 @@ a {
 .collapse {
   margin-top: 48px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 .collapse__content {
+  flex-direction: column;
   background-color: rgb(246, 246, 246);
-  width: 100%;
   color: #ff6060;
   border-radius: 0px 0px 5px 0px;
   padding-left: 15px;
@@ -199,11 +196,8 @@ a {
   position: relative;
   background-color: #ff6060;
   border-radius: 5px;
-  width: 80%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
 }
 .collapse__title {
   color: white;
@@ -225,6 +219,18 @@ a {
   position: absolute;
   right: 15px;
   top: 23px;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+ul {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 0px;
+  padding-bottom: 5px;
 }
 
 .card {
@@ -309,4 +315,100 @@ article {
 .loading p {
   margin-left: 10px;
   font-size: 1.2em;
+}
+
+.logement__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 35px;
+}
+.logement__container__title__h1 {
+  color: #ff6060;
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.logement__container__title__p {
+  color: black;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.logement__container__tags {
+  display: flex;
+  gap: 20px;
+}
+.logement__container__rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logement__container__rate__host {
+  display: flex;
+  align-items: center;
+}
+.logement__collapse {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 76px;
+  padding-bottom: 35px;
+}
+.logement__collapse__container {
+  width: 50%;
+}
+
+.host {
+  margin-right: 10px;
+  text-align: right;
+  width: 93px;
+  font-size: 18px;
+  color: #ff6060;
+}
+.host__img {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rate__star {
+  width: 24.75px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  padding-top: 25px;
+  flex-direction: column;
+}
+.about__collapse {
+  margin-bottom: 20px;
+}
+.about__collapse__content {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pageAbout {
+  min-height: 69vh;
+}
+
+.logement__container__tags__layout {
+  background: #ff6060;
+  border-radius: 5px;
+  padding: 5px 30px 5px 30px;
+}
+.logement__container__tags__layout__button {
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
 }/*# sourceMappingURL=app.css.map */

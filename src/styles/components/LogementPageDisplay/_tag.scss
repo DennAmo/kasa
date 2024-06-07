@@ -1,0 +1,27 @@
+.logement {
+
+    &__container {
+
+        &__tags {
+        
+           
+    
+    &__layout {
+        background: #ff6060;
+        border-radius: 5px;
+        padding: 5px 30px 5px 30px;
+
+        &__button {
+            height: 18px;
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            color: #ffffff;
+        }
+    }
+        }
+    }
+}

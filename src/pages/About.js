@@ -2,25 +2,26 @@ import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import CollapseData from "../datas/collapses.json"
+import BannerAbout from "../assets/bannerabout.jpg"
 
 const About = () => {
   return (
-    <div className="about">
+
       
-      <main>
-        <Banner />
-          <div className="collapse">
+      <main className="pageAbout">
+        <Banner image={BannerAbout} />
+          <div className="about">
             {CollapseData.map((item) => {
               return (
-                <div className="collapse__layout" key={item.id}>
-                  <Collapse content={item.content} title={item.title} />
+                <div className="about__collapse" key={item.id}>
+                  <Collapse content=<p className="about__collapse__content">{item.content}</p> title={item.title} />
                 </div>
               );
             })}
           </div>
       </main>
 
-    </div>
+ 
   );
 };
 

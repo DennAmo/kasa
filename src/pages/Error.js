@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Home = () => {
     return (
 
-        <div className="error">
+
             <main>
                 <section className="error__container">
                     <p className="error__container__number">404
@@ -19,7 +19,7 @@ const Home = () => {
 
                 </section>
             </main>
-        </div>
+  
 
 
     )
