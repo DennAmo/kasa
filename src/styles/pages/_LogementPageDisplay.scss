@@ -49,10 +49,18 @@
         gap: 76px;
         padding-bottom: 35px;
 
+        .collapse__content p {
+            margin: 0;
+                padding-top: 10px;
+                padding-bottom: 10px;
+        }
+
         &__container {
             width: 50%;
         }
     }
 }
+
+
 
 
