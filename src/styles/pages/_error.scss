@@ -22,10 +22,12 @@
         }
 
         &__link {
-            text-decoration: none;
+            
             color: black;
             padding-bottom: 85px;
-
+            &:hover {
+                text-decoration: underline;
+                        }
         }
     }
 }
