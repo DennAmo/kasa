@@ -4,15 +4,24 @@
         display: flex;
         justify-content: space-between;
         padding-top: 15px;
+        width: 100%;
         padding-bottom: 35px;
+        @media screen and (max-width: 750px) {
+            display: inherit;
+            width: 100%;
+         }
 
         &__title {
+        
            
             &__h1 {
                 color: $primary-color;
                 font-size: 36px;
                 margin: 0;
                 margin-bottom: 10px;
+                @media screen and (max-width: 335px) { 
+                    font-size: 14px;
+                }
             }
 
             &__p {
@@ -27,6 +36,10 @@
         &__tags {
             display: flex;
             gap: 20px;
+            white-space: nowrap;
+            @media screen and (max-width: 750px) {
+                display: inherit;
+             }
         }
 
         &__rate {
@@ -34,10 +47,16 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            @media screen and (max-width: 750px) {
+                display: inherit;
+             }
             &__host {
                 display: flex;
                 align-items: center;
+                @media screen and (max-width: 750px) {
+                    justify-content: flex-end;
+                 padding-top: 20px;
+                }
             }
         }
     }
@@ -49,15 +68,25 @@
         gap: 76px;
         padding-bottom: 35px;
 
+        &__container {
+            width: 100%;
+        }
+
         .collapse__content p {
             margin: 0;
                 padding-top: 10px;
                 padding-bottom: 10px;
         }
 
-        &__container {
-            width: 50%;
-        }
+        @media screen and (max-width: 750px) {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+         }
+
+
+
+
     }
 }
 

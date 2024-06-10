@@ -13,6 +13,8 @@
     @media screen and (max-width: 768px) {
         width: 100%;
         height: 280px;
+        margin: 0;
+        margin-bottom: 30px;
     }
 
     @media screen and (min-width: 1024px) {  /* Utilisation d'une valeur fixe pour le breakpoint */
@@ -34,6 +36,7 @@
         filter: grayscale(10%) opacity(90%) brightness(0.7);
         @media screen and (max-width: 768px) {
             width: 100%;
+            min-width: 100px;
         }
     }
 

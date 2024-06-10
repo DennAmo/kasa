@@ -3,42 +3,44 @@
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100%;
+  height: 223px;
+  margin-bottom: 43px;
 }
 .banner__image {
   width: 100%;
-  height: 111px;
+  height: 223px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
   filter: grayscale(1%) opacity(90%) brightness(0.55);
 }
 @media screen and (min-width: 1024px) {
-  .banner__image { /* Utilisation d'une valeur fixe pour le breakpoint */
-    height: 223px;
+  .banner__image {
     border-radius: 25px;
   }
 }
+@media screen and (max-width: 480px) {
+  .banner__image {
+    height: 250px;
+  }
+}
 .banner__title {
+  width: 100%;
+  top: 40%;
   position: absolute;
-  top: 28.04%;
-  left: 5.6%;
-  right: 32.53%;
-  bottom: 80.05%;
+  text-align: center;
   color: white;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 142.6%;
+  font-size: 38px;
+}
+@media screen and (max-width: 480px) {
+  .banner__title {
+    font-size: 28px;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .banner__title { /* Utilisation d'une valeur fixe pour le breakpoint */
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .banner__title {
     width: 100%;
-    height: 100%;
     font-size: 48px;
     font-weight: 700;
   }
@@ -48,12 +50,22 @@
   justify-content: space-between;
   display: flex;
   width: 100%;
-  padding-left: 70px;
+  padding-left: 40px;
   padding-right: 70px;
 }
+@media screen and (max-width: 675px) {
+  .header {
+    justify-content: center;
+  }
+}
 .header__logo {
-  align-items: flex-start;
   width: 11rem;
+}
+@media screen and (max-width: 675px) {
+  .header__logo {
+    width: 10rem;
+    justify-content: center;
+  }
 }
 
 .footer {
@@ -75,14 +87,18 @@
 }
 
 .nav-header {
-  padding-left: 20px;
   padding-top: 20px;
   display: flex;
   gap: 57px;
 }
+@media screen and (max-width: 475px) {
+  .nav-header {
+    gap: 30px;
+  }
+}
 .nav-header__nav-link-home, .nav-header__nav-link-about {
   text-decoration: none;
-  color: #ff6060;
+  color: black;
   font-size: 24px;
   font-weight: 500;
 }
@@ -96,22 +112,18 @@
 }
 
 body {
-  padding-top: 45px;
   margin: 0;
 }
 
 main {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 a {
   text-decoration: none;
 }
 
-.gallery {
-  padding-top: 43px;
-}
 .gallery__layout {
   display: flex;
   justify-content: space-evenly;
@@ -120,6 +132,15 @@ a {
   border-radius: 25px;
   background: #F6F6F6;
   padding-top: 25px;
+}
+@media screen and (max-width: 789px) {
+  .gallery .gallery__layout {
+    background-color: white;
+    width: 100%;
+  }
+  .gallery .gallery__cards {
+    width: 100%;
+  }
 }
 
 @media (max-width: 789px) {
@@ -134,37 +155,10 @@ a {
   .header {
     flex-wrap: wrap;
   }
-  .banner__title {
-    padding-left: 15px;
-    padding-top: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    top: 50px;
-  }
-  .gallery__layout {
-    background-color: white;
-    width: 90%;
-  }
-  .gallery__cards {
-    width: 100%;
-  }
 }
 @media (max-width: 480px) {
   .header {
     justify-content: center;
-  }
-  .banner__title {
-    position: absolute;
-    top: 10px;
-  }
-}
-@media (max-width: 330px) {
-  .banner__image {
-    height: 355px;
-  }
-  .banner__title {
-    position: absolute;
-    top: 45px;
   }
 }
 .error__container {
@@ -200,11 +194,6 @@ a {
   }
   .error__container__number {
     font-size: 96px;
-  }
-  .header {
-    padding-left: 0px;
-    padding-right: 0px;
-    justify-content: center;
   }
 }
 .collapse {
@@ -274,6 +263,8 @@ ul {
   .card {
     width: 100%;
     height: 280px;
+    margin: 0;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -298,6 +289,7 @@ ul {
 @media screen and (max-width: 768px) {
   .card__img {
     width: 100%;
+    min-width: 100px;
   }
 }
 .card__title {
@@ -316,6 +308,11 @@ ul {
 
 .carrousel {
   position: relative;
+}
+@media screen and (max-width: 750px) {
+  .carrousel {
+    padding-top: 30px;
+  }
 }
 .carrousel__image {
   width: 100%;
@@ -375,13 +372,25 @@ ul {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
+  width: 100%;
   padding-bottom: 35px;
+}
+@media screen and (max-width: 750px) {
+  .logement__container {
+    display: inherit;
+    width: 100%;
+  }
 }
 .logement__container__title__h1 {
   color: #ff6060;
   font-size: 36px;
   margin: 0;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 335px) {
+  .logement__container__title__h1 {
+    font-size: 14px;
+  }
 }
 .logement__container__title__p {
   color: black;
@@ -392,15 +401,32 @@ ul {
 .logement__container__tags {
   display: flex;
   gap: 20px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 750px) {
+  .logement__container__tags {
+    display: inherit;
+  }
 }
 .logement__container__rate {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 750px) {
+  .logement__container__rate {
+    display: inherit;
+  }
+}
 .logement__container__rate__host {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 750px) {
+  .logement__container__rate__host {
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
 }
 .logement__collapse {
   display: flex;
@@ -409,13 +435,20 @@ ul {
   gap: 76px;
   padding-bottom: 35px;
 }
+.logement__collapse__container {
+  width: 100%;
+}
 .logement__collapse .collapse__content p {
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.logement__collapse__container {
-  width: 50%;
+@media screen and (max-width: 750px) {
+  .logement__collapse {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .host {
@@ -458,10 +491,23 @@ ul {
   min-height: 69vh;
 }
 
+.logement__container__tags {
+  display: flex;
+}
+@media screen and (max-width: 335px) {
+  .logement__container__tags {
+    flex-direction: column;
+  }
+}
 .logement__container__tags__layout {
   background: #ff6060;
   border-radius: 5px;
   padding: 5px 30px 5px 30px;
+}
+@media screen and (max-width: 730px) {
+  .logement__container__tags__layout {
+    min-width: 86px;
+  }
 }
 .logement__container__tags__layout__button {
   height: 18px;
@@ -470,4 +516,14 @@ ul {
   justify-content: center;
   text-align: center;
   color: #ffffff;
+}
+@media screen and (max-width: 730px) {
+  .logement__container__tags__layout__button {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .logement__container__tags__layout__button {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=app.css.map */

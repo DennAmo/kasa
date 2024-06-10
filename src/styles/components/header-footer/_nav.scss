@@ -1,14 +1,16 @@
 .nav-header {
-    padding-left: 20px;
     padding-top: 20px;
     display: flex;
     gap: 57px;
+    @media screen and (max-width: 475px) {
+      gap: 30px;
+  }
 
 
     &__nav-link-home,
     &__nav-link-about {
         text-decoration: none;
-        color: $primary-color;
+        color: black;
         font-size: 24px;
         font-weight: 500;
         

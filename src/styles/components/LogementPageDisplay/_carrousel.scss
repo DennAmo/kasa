@@ -1,6 +1,8 @@
 .carrousel {
     position: relative;
-
+    @media screen and (max-width: 750px) {
+       padding-top: 30px;
+     }
     &__image {
         width: 100%;
         object-fit: cover;
