@@ -9,14 +9,14 @@ const About = () => {
     <main className="pageAbout">
       <Banner image={BannerAbout} />
       <div className="about">
-        {CollapseData.map((item) => {
+        {CollapseData.map((collapseArray, i) => {
           return (
-            <div className="about__collapse" key={item.id}>
+            <div className="about__collapse" key={i}>
               <Collapse
                 content=<p className="about__collapse__content">
-                  {item.content}
+                  {collapseArray.content}
                 </p>
-                title={item.title}
+                title={collapseArray.title}
               />
             </div>
           );
