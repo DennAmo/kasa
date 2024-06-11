@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logements from "../../datas/logement.json"
+import logements from "../../datas/logement.json";
 import Card from "./Card";
 
 const Gallery = () => {
@@ -18,7 +18,7 @@ const Gallery = () => {
         })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

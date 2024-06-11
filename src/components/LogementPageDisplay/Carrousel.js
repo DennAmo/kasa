@@ -1,10 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Carrousel({ slides }) {
-
-  const [current, setCurrent] = useState(0)
-  const length = slides.length
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
@@ -36,18 +34,17 @@ function Carrousel({ slides }) {
           <i className="fa-solid fa-4x fa-chevron-right"></i>
         </p>
       )}
-
-      {slides.map((image, index) => {
-        return (
-          <div key={index} className={index === current ? "carrousel__active" : "carrousel__slider"}>
-            {index === current && (
-              <img src={image} alt="appartement" className="carrousel__image" />
-            )}
-
-          </div>
-        );
-      })}
+      
+      <div className="carrousel__slider">
+        <img src={slides[current]} alt="appartement" className="carrousel__image" />
+      </div>
+      {length > 1 && (
+        <p className="carrousel__indicator">
+          {current + 1}/{length}
+        </p>
+      )}
     </div>
+
   );
 }
 

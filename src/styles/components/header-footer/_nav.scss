@@ -1,4 +1,4 @@
-.nav-header {
+.nav {
     padding-top: 20px;
     display: flex;
     gap: 57px;
@@ -6,10 +6,10 @@
       gap: 30px;
   }
 
+ 
 
-    &__nav-link-home,
-    &__nav-link-about {
-        text-decoration: none;
+    &__link {
+       
         color: black;
         font-size: 24px;
         font-weight: 500;
@@ -18,8 +18,11 @@
           text-decoration-line: underline;
         }
 
-    }
-   
 
+    }
+    
+    .nav__link.active {
+      text-decoration: underline;
+    }
 
 }

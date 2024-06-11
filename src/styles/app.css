@@ -86,24 +86,26 @@
   margin-bottom: 29px;
 }
 
-.nav-header {
+.nav {
   padding-top: 20px;
   display: flex;
   gap: 57px;
 }
 @media screen and (max-width: 475px) {
-  .nav-header {
+  .nav {
     gap: 30px;
   }
 }
-.nav-header__nav-link-home, .nav-header__nav-link-about {
-  text-decoration: none;
+.nav__link {
   color: black;
   font-size: 24px;
   font-weight: 500;
 }
-.nav-header__nav-link-home:hover, .nav-header__nav-link-about:hover {
+.nav__link:hover {
   text-decoration-line: underline;
+}
+.nav .nav__link.active {
+  text-decoration: underline;
 }
 
 * {
@@ -320,9 +322,7 @@ ul {
      object-fit: cover;
   height: 410px;
   border-radius: 25px;
-}
-.carrousel__slider {
-  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
 }
 .carrousel__arrow {
   position: absolute;
@@ -337,9 +337,17 @@ ul {
 .carrousel__rightarrow {
   right: 20px;
 }
-.carrousel__active {
-  opacity: 1;
-  transition: opacity ease-in-out 0.2s;
+.carrousel__indicator {
+  color: white;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  text-align: center;
+}
+@media screen and (max-width: 860px) {
+  .carrousel .fa-4x {
+    font-size: 2em;
+  }
 }
 
 .loading {

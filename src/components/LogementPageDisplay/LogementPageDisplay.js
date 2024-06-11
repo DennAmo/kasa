@@ -7,7 +7,7 @@ import Collapse from "../Collapse";
 import Rate from "./Rate";
 import Host from "./Host";
 import Loading from "./Loading";
-
+  
 const LogementPageDisplay = () => {
   const { id } = useParams();
   const [pageLogement, setPageLogement] = useState(null);
@@ -35,8 +35,8 @@ const LogementPageDisplay = () => {
           <h1 className="logement__container__title__h1">{title}</h1>
           <p className="logement__container__title__p">{location}</p>
           <div className="logement__container__tags">
-          {tags.map((tag, index) => (
-            <Tag key={index} nom={tag} />
+          {tags.map((tagArray, index) => (
+            <Tag key={index} content={tagArray} />
           ))}
         </div>
         </div>
@@ -44,7 +44,7 @@ const LogementPageDisplay = () => {
         <div className="logement__container__rate__host">
           <Host name={host.name} picture={host.picture} />
         </div>
-          <Rate score={rating} />
+          <Rate content={rating} />
         </div>
 
       </div>
@@ -57,8 +57,8 @@ const LogementPageDisplay = () => {
         </div>
         <div className="logement__collapse__container">
         <Collapse content={
-          <ul>{equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
+          <ul>{equipments.map((equipmentArray, index) => (
+                <li key={index}>{equipmentArray}</li>
               ))}
             </ul>
           } 

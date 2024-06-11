@@ -3,18 +3,16 @@ import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav className="nav-header">
-
-      <NavLink to="/" className="nav-header__nav-link-home">
+    <nav className="nav">
+      <NavLink to="/accueil" end className="nav__link" activeclassname="active">
         Accueil
       </NavLink>
 
-      <NavLink to="/about" className="nav-header__nav-link-about">
+      <NavLink to="/about" end className="nav__link" activeclassname="active">
         A Propos
       </NavLink>
-      
     </nav>
   );
-};
+}
 
 export default Nav;
