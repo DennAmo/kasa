@@ -132,7 +132,7 @@ a {
   flex-wrap: wrap;
   width: 100%;
   border-radius: 25px;
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding-top: 25px;
 }
 @media screen and (max-width: 789px) {
@@ -270,7 +270,7 @@ ul {
   }
 }
 @media screen and (min-width: 1024px) {
-  .card { /* Utilisation d'une valeur fixe pour le breakpoint */
+  .card {
     width: 350px;
     height: 280px;
     border-radius: 25px;
@@ -303,7 +303,7 @@ ul {
   font-weight: 700;
 }
 @media screen and (min-width: 1024px) {
-  .card__title { /* Utilisation d'une valeur fixe pour le breakpoint */
+  .card__title {
     font-size: 24px;
   }
 }
@@ -434,6 +434,7 @@ ul {
   .logement__container__rate__host {
     justify-content: flex-end;
     padding-top: 20px;
+    padding-bottom: 15px;
   }
 }
 .logement__collapse {
@@ -514,7 +515,7 @@ ul {
 }
 @media screen and (max-width: 730px) {
   .logement__container__tags__layout {
-    min-width: 86px;
+    min-width: 30px;
   }
 }
 .logement__container__tags__layout__button {

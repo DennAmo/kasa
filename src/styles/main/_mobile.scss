@@ -1,26 +1,21 @@
 @media (max-width: 789px) {
+  main {
+    padding: 0;
+  }
 
-    main {
-        padding: 0;
-    }
+  main,
+  .header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
-    main,
-    .header {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .header {
-
-        flex-wrap: wrap;
-    }
-
+  .header {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: $breakpoint-mobile) {
-    .header {
-        justify-content: center;
-    }
-
+  .header {
+    justify-content: center;
+  }
 }
-

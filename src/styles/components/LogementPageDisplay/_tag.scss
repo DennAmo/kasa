@@ -1,41 +1,36 @@
 .logement {
+  &__container {
+    &__tags {
+      display: flex;
+      @media screen and (max-width: 335px) {
+        flex-direction: column;
+      }
 
-    &__container {
-
-        &__tags {
-            display: flex;
-            @media screen and (max-width: 335px) { 
-                flex-direction: column;
-            }
-           
-    
-    &__layout {
+      &__layout {
         background: #ff6060;
         border-radius: 5px;
         padding: 5px 30px 5px 30px;
 
         @media screen and (max-width: 730px) {
-           min-width: 86px;
-       
-         }
+          min-width: 30px;
+        }
 
         &__button {
-            height: 18px;
-           
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            
-            color: #ffffff;
-            @media screen and (max-width: 730px) {
-                font-size: 14px;
-              }
-              @media screen and (max-width: 430px) {
-                font-size: 10px;
-              }
+          height: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: #ffffff;
+          
+          @media screen and (max-width: 730px) {
+            font-size: 14px;
+          }
+          @media screen and (max-width: 430px) {
+            font-size: 10px;
+          }
         }
+      }
     }
-        }
-    }
+  }
 }

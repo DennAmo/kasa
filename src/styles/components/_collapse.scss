@@ -1,65 +1,55 @@
 .collapse {
-  
-    margin-top: 48px;
+  margin-top: 48px;
+  display: flex;
+
+  &__content {
+    background-color: rgb(246, 246, 246);
+    color: $primary-color;
+    border-radius: 0px 0px 5px 0px;
+    padding-left: 15px;
+  }
+
+  &__layout {
+    position: relative;
+    background-color: $primary-color;
+    border-radius: 5px;
     display: flex;
- 
-    &__content {
-        background-color:  rgb(246, 246, 246);
-        color: $primary-color;
-        border-radius: 0px 0px 5px 0px;
-        padding-left: 15px;
-  
-    }
+    flex-direction: column;
+  }
 
+  &__title {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 15px;
+  }
 
-    &__layout {
-        
-        position: relative;
-        background-color: $primary-color;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
+  .collapse h2 {
+    padding: 0;
+    margin: 0;
+  }
 
-  
-    }
-
-    &__title {
-        
-        color: white;
-        cursor: pointer;
-        font-size: 14px;
-        padding-left: 15px;
-
-    }
-
-    .collapse h2 {
-        padding: 0;
-        margin: 0;
-    }
-
-    .collapse span {
-        margin-top: 0;
-        padding-top: 0;
-    }
-
-
+  .collapse span {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 .fa-chevron-up,
 .fa-chevron-down {
-    position: absolute;
-    right: 15px;
-    top: 23px;
+  position: absolute;
+  right: 15px;
+  top: 23px;
 }
 
 li {
-    list-style-type: none;
-    margin-bottom: 5px;
+  list-style-type: none;
+  margin-bottom: 5px;
 }
 
 ul {
-    margin: 0;
-    padding-top: 5px;
-    padding-left: 0px;
-    padding-bottom: 5px;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 0px;
+  padding-bottom: 5px;
 }

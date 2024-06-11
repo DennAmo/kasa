@@ -1,17 +1,14 @@
-
-
 .host {
-    margin-right: 10px;
-        text-align: right;
-        width: 93px;
-        font-size: 18px;
-        color: $primary-color;
-        
-        &__img {
-            border-radius: 50%;
-                width: 64px;
-                height: 64px;
-                object-fit: cover;
-        }
-        
+  margin-right: 10px;
+  text-align: right;
+  width: 93px;
+  font-size: 18px;
+  color: $primary-color;
+
+  &__img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+  }
 }

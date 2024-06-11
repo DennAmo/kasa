@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Carrousel({ slides }) {
-  const [current, setCurrent] = useState(0);
+  const [index, setIndex] = useState(0);
   const length = slides.length;
 
   if (!Array.isArray(slides) || slides.length <= 0) {
@@ -9,16 +9,16 @@ function Carrousel({ slides }) {
   }
 
   const next = () => {
-    setCurrent(current + 1);
-    if (current === slides.length - 1) {
-      setCurrent(0);
+    setIndex(index + 1);
+    if (index === slides.length - 1) {
+      setIndex(0);
     }
   };
 
   const previous = () => {
-    setCurrent(current - 1);
-    if (current === 0) {
-      setCurrent(slides.length - 1);
+    setIndex(index - 1);
+    if (index === 0) {
+      setIndex(slides.length - 1);
     }
   };
 
@@ -36,11 +36,11 @@ function Carrousel({ slides }) {
       )}
       
       <div className="carrousel__slider">
-        <img src={slides[current]} alt="appartement" className="carrousel__image" />
+        <img src={slides[index]} alt="appartement" className="carrousel__image" />
       </div>
       {length > 1 && (
         <p className="carrousel__indicator">
-          {current + 1}/{length}
+          {index + 1}/{length}
         </p>
       )}
     </div>
